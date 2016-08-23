@@ -3,7 +3,7 @@
 </div>
 
     {{#if uses}}
-    <div class="well well-small">
+	<div class="well well-small">
         <div class="uses">
             Uses
             <ul class="inline commas">
@@ -16,7 +16,7 @@
     {{/if}}
 
     {{#if extends}}
-    <div class="well well-small">
+	<div class="well well-small">
         <div class="extends">
             Extends {{#crossLink extends}}{{/crossLink}}
         </div>
@@ -24,14 +24,14 @@
     {{/if}}
 
     {{#if module}}
-        <div class="well well-small">
-            {{#if submodule}}
-                Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
-                Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
-            {{else}}
-                Module: {{#crossLinkModule module}}{{/crossLinkModule}}
-            {{/if}}
-        </div>
+	<div class="well well-small">
+        {{#if submodule}}
+            Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
+            Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+        {{else}}
+            Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+        {{/if}}
+    </div>
     {{/if}}
 
     {{#if since}}
@@ -51,9 +51,9 @@
 {{/if}}
 
 {{#if classDescription}}
-    <div class="yuidoc-class-description">
-        {{{classDescription}}}
-    </div>
+<div class="yuidoc-class-description">
+{{{classDescription}}}
+</div>
 {{/if}}
 
 
@@ -63,7 +63,7 @@
     <div class="constructor yuidoc-class-constructor page-section">
         <h2>Constructor</h2>
         <div class="item-list">
-            {{>method}}
+{{>method}}
         </div>
     </div>
 {{/is_constructor}}
@@ -72,10 +72,10 @@
     <div id="methods" class="page-section">
         <h2 class="off-left">Methods</h2>
         <div class="item-list">
-            {{#methods}}
-            {{#if static}}
+       		{{#methods}}
+        	{{#if static}}
             {{else}}
-                {{>method}}
+{{>method}}
             {{/if}}
         {{/methods}}
         </div>
@@ -88,7 +88,7 @@
 
         <div class="item-list">
         {{#properties}}
-            {{>props}}
+{{>props}}
         {{/properties}}
         </div>
     </div>
@@ -99,7 +99,7 @@
         <h2 class="off-left">Attributes</h2>
 
         {{#attrs}}
-            {{>attrs}}
+{{>attrs}}
         {{/attrs}}
     </div>
 {{/if}}
@@ -110,7 +110,7 @@
 
         <div class="item-list">
         {{#events}}
-            {{>events}}
+{{>events}}
         {{/events}}
         </div>
     </div>
@@ -121,8 +121,8 @@
         <h2 class="off-left">Static Methods</h2>
         <div class="item-list">
         {{#methods}}
-            {{#if static}}
-                {{>method}}
+			{{#if static}}
+{{>method}}
             {{/if}}
         {{/methods}}
         </div>
