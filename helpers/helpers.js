@@ -106,7 +106,6 @@ module.exports = {
 
 			console.log("x", frontMatter)
 			return  "---\n" + frontMatter + "---\n\n";
-
 		}
 
 		return '';
