@@ -104,7 +104,6 @@ module.exports = {
 				return frontMatterString + key + ": " + projectJekyllFrontMatter[key] + "\n";
 			}, "");
 
-			console.log("x", frontMatter)
 			return  "---\n" + frontMatter + "---\n\n";
 		}
 
