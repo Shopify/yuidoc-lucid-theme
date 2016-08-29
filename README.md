@@ -36,6 +36,9 @@ Example:
 {
     "name": "Example",
     "url": "www.example.com",
+    "jekyllFrontMatter": {
+        "layout": "api"
+    },
     "version": "0.1.0",
     "options": {
         "paths": "_location to parse_",

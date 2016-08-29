@@ -95,5 +95,20 @@ module.exports = {
 		}
 
 		return ret;
+	},
+	jekyllFrontMatter: function(context, options) {
+		if (context.data.root.projectJekyllFrontMatter) {
+			var projectJekyllFrontMatter = context.data.root.projectJekyllFrontMatter;
+
+			var frontMatter = Object.keys(projectJekyllFrontMatter).reduce(function(frontMatterString, key) {
+				return frontMatterString + key + ": " + projectJekyllFrontMatter[key] + "\n";
+			}, "");
+
+			console.log("x", frontMatter)
+			return  "---\n" + frontMatter + "---\n\n";
+
+		}
+
+		return '';
 	}
 };
